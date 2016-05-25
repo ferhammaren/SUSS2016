@@ -14,23 +14,24 @@ namespace Clases.Modelos
         public string ap_materno { get; set; }
         private int idUsuario { get; set; }
         public int matricula { get; set; }
-        private string unidadAcademica { get; set; }
+        public string unidadAcademica { get; set; }
+        public string carrera { get; set; }
+        public int credCarrera { get; set; }
         public string correoAlt { get; set; }
         public int horasPrimEtapa { get; set; }
         public int horasSegEtapa { get; set; }
+        public int credAcumulados { get; set; }
         public DateTime fechaTallerPrimEtapa { get; set; }
         public DateTime fechaTallerSegEtapa { get; set; }
         public DateTime fechaAcPrimEtapa { get; set; }
         public DateTime fechaAcSegEtapa { get; set; }
-        private ProgramaSS[] programas { get; set; }
 
-        public Alumno(string nombre, string ap_pat, string ap_mat, int matricula, string unidadAc, int idUsuario)
+        public Alumno(string nombre, string ap_pat, string ap_mat, int matricula, int idUsuario)
         {
             this.nombre = nombre;
             this.ap_paterno = ap_pat;
             this.ap_materno = ap_mat;
             this.matricula = matricula;
-            this.unidadAcademica = unidadAc;
             this.idUsuario = idUsuario;
         }
 

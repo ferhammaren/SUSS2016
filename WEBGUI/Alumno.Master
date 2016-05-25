@@ -9,19 +9,17 @@
     </asp:ContentPlaceHolder>
  <link rel="stylesheet" type="text/css" href="estilo.css">
     <style type="text/css">
-        .auto-style2 {
-            width: 19%;
+        .auto-style3 {
+            left: 0px;
+            top: 0px;
         }
-    </style>
+        </style>
 </head>
 <body>
     <form id="form1" runat="server">
         <header>
             <table class="auto-style1">
             <tr>
-            <td>
-        <asp:Image ID="Image1" runat="server" Height="114px" ImageUrl="~\imagenes\logoUABC.jpg" Width="78px" />
-            </td>
             <td style="text-align: center; vertical-align: middle">Universidad Autónoma de Baja California
                 <br />
                 Coordinación de Formación Básica
@@ -29,88 +27,47 @@
                 Coordinación de Formación Profesional y Vinculación Universitaria<br />
                 Sistema Universitario de Servicio Social</td>
                 <td>&nbsp;</td>
-                <td>&nbsp;</td>
             </tr>
             </table>
         </header>
         
-        <table class="auto-style1">
-            <tr><td></td><td>Bienvenid@
-                <asp:Label ID="lbNombre" runat="server" Text="nombreCompleto"></asp:Label>
-                </td><td>&nbsp;</td></tr>
-            <tr><td>&nbsp;</td><td>
-                &nbsp;</td><td style="align-items=right">
+        <table width="100%">
+            <tr><td style="text-align: right">Bienvenid@&nbsp;&nbsp;&nbsp; <br />
+                    &nbsp;<asp:Label ID="lbNombre" runat="server" Text="nombreCompleto"></asp:Label>
+                    &nbsp;&nbsp;
+                    <br />
                 <asp:HyperLink ID="HyperLink1" runat="server">Cerrar Sesión</asp:HyperLink>
+                &nbsp;&nbsp;&nbsp;
                 </td></tr>
             </table>
         
-    <div>
-         <table class="auto-style1">
-             <tr>
-                 <td class="auto-style2">
-         <asp:Menu ID="Menu1" runat="server">
+         <asp:Menu ID="Menu1" runat="server" Orientation="Horizontal" Font-Size="Small" Width="100%" ItemWrap="True" RenderingMode="Table">
                 <Items>
                     <asp:MenuItem NavigateUrl="~/alumnoMain.aspx" Text="Principal" Value="Principal"></asp:MenuItem>
-                    <asp:MenuItem NavigateUrl="~/alumnoCatalogoProgramas.aspx" Text="Catálogo de programas" Value="Catálogo de programas"></asp:MenuItem>
-                    <asp:MenuItem NavigateUrl="~/alumnoReporte.aspx" Text="Reportes" Value="Reportes"></asp:MenuItem>
-                    <asp:MenuItem Text="Taller de Servicio Social" Value="Taller de Servicio Social">
+                    <asp:MenuItem NavigateUrl="~/alumnoCatalogoProgramas.aspx" Text="Catálogo de<br>programas" Value="Catálogo de programas"></asp:MenuItem>
+                    <asp:MenuItem Text="Taller de<br>Servicio Social" Value="Taller de Servicio Social">
                         <asp:MenuItem Text="Información de Servicio Social" Value="Información de Servicio Social"></asp:MenuItem>
-                        <asp:MenuItem Text="Presentar Taller en línea" Value="Presentar Taller en línea"></asp:MenuItem>
+                        <asp:MenuItem Text="Presentar Taller<br>en línea" Value="Presentar Taller en línea"></asp:MenuItem>
                     </asp:MenuItem>
                     <asp:MenuItem Text="Actualizar datos" Value="Actualizar datos"></asp:MenuItem>
-                    <asp:MenuItem Text="Contáctanos" Value="Contáctanos"></asp:MenuItem>
+                    <asp:MenuItem Text="Directorio de Responsables<br>Unidades Académicas" Value="Directorio de Responsables Unidades Académicas"></asp:MenuItem>
+                    <asp:MenuItem Text="Procedimientos" Value="Procedimientos"></asp:MenuItem>
+                    <asp:MenuItem Text="Calendario de Talleres<br>de Servicio Social" Value="Calendario de Talleres de Servicio Social"></asp:MenuItem>
+                    <asp:MenuItem Text="Consulta y descarga de documentos<br>relacionados a Servicio Social" Value="Consulta y descarga de documentos relacionados a Servicio Social"></asp:MenuItem>
                 </Items>
             </asp:Menu>
-                 </td>
-                 <td>    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+    <div id="placeholder">
+           <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
         
            
-                     <table class="auto-style1">
-                         <tr>
-                             <td>&nbsp;</td>
-                             <td>&nbsp;</td>
-                             <td>&nbsp;</td>
-                             <td>&nbsp;</td>
-                             <td>&nbsp;</td>
-                         </tr>
-                         <tr>
-                             <td>&nbsp;</td>
-                             <td>&nbsp;</td>
-                             <td>&nbsp;</td>
-                             <td>&nbsp;</td>
-                             <td>&nbsp;</td>
-                         </tr>
-                         <tr>
-                             <td>&nbsp;</td>
-                             <td>&nbsp;</td>
-                             <td>&nbsp;</td>
-                             <td>&nbsp;</td>
-                             <td>&nbsp;</td>
-                         </tr>
-                         <tr>
-                             <td>&nbsp;</td>
-                             <td>&nbsp;</td>
-                             <td>&nbsp;</td>
-                             <td>&nbsp;</td>
-                             <td>&nbsp;</td>
-                         </tr>
-                         <tr>
-                             <td>&nbsp;</td>
-                             <td>&nbsp;</td>
-                             <td>&nbsp;</td>
-                             <td>&nbsp;</td>
-                             <td>&nbsp;</td>
-                         </tr>
-                     </table>
-        
            
-        </asp:ContentPlaceHolder></td>
-             </tr>
-         </table>
+        </asp:ContentPlaceHolder>
+           
     
     </div>
     </form>
-      <footer>Elaborado por: Luisa Fernanda Meza López y Edgar Alan Cebrero López</footer>
+      <footer class="auto-style3">Contacto<br /><table><tr><td>Servicio Social Comunitario</td><td>Servicio Social Profesional</td></tr><tr><td>I</td><td>&nbsp;</td></tr></table></footer>
 </body>
 
 </html>
