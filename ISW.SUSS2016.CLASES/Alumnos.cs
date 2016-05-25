@@ -13,7 +13,7 @@ namespace SUSS2016.CLASES
    public class Alumnos
     {
         
-       private static Alumno al=new Alumno();
+        private static Alumno al=new Alumno();
        private static DataSet ds;
 
         public static void getInfoAlumno(int numero)
