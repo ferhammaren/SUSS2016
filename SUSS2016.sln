@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WEBGUI", "SUSS2016\WEBGUI.csproj", "{67661922-466F-41AC-8209-FE8E49EDA1F9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SUSS2016.DA", "SUSS2016.DA\SUSS2016.DA.csproj", "{5DF59861-59F7-4DF6-8F14-22184326C75D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SUSS2016.CLASES", "ISW.SUSS2016.CLASES\SUSS2016.CLASES.csproj", "{16758B89-26B6-40C0-87DD-8EDF2E5F9E58}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{67661922-466F-41AC-8209-FE8E49EDA1F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{67661922-466F-41AC-8209-FE8E49EDA1F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{67661922-466F-41AC-8209-FE8E49EDA1F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{67661922-466F-41AC-8209-FE8E49EDA1F9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5DF59861-59F7-4DF6-8F14-22184326C75D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5DF59861-59F7-4DF6-8F14-22184326C75D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5DF59861-59F7-4DF6-8F14-22184326C75D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5DF59861-59F7-4DF6-8F14-22184326C75D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{16758B89-26B6-40C0-87DD-8EDF2E5F9E58}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{16758B89-26B6-40C0-87DD-8EDF2E5F9E58}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{16758B89-26B6-40C0-87DD-8EDF2E5F9E58}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{16758B89-26B6-40C0-87DD-8EDF2E5F9E58}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
