@@ -8,7 +8,12 @@
             <asp:BoundField DataField="idPrograma" HeaderText="ID del programa" />
             <asp:BoundField DataField="nombrePrograma" HeaderText="Nombre del Programa" />
             <asp:BoundField DataField="etapa" HeaderText="Etapa" />
-            <asp:ButtonField Text="Solicitar" ButtonType="Button" CommandName="asignacion" HeaderText="Solicitar Asignación" />
+            <asp:TemplateField>
+    <ItemTemplate>
+        <asp:Button ID="btnSolicitar" runat="server" Text="Solicitar" 
+                    OnClick="MyButtonClick" />
+    </ItemTemplate>
+</asp:TemplateField>
         </Columns>
     </asp:GridView>
     <br />

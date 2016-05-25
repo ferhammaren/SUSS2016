@@ -61,7 +61,7 @@
                 </asp:FormView>
                 <asp:ObjectDataSource ID="ObjectDataSource1" runat="server" SelectMethod="SelectSingle" TypeName="DA.PROGRAMASERVICIOSOCIAL">
                     <SelectParameters>
-                        <asp:SessionParameter Name="idPrograma" SessionField="idProgramaSolicitado" Type="Int32" />
+                        <asp:SessionParameter Name="idPrograma" SessionField="programaSelected" Type="Int32" />
                     </SelectParameters>
                 </asp:ObjectDataSource>
             </td>

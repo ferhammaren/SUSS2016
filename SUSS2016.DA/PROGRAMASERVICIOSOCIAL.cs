@@ -92,9 +92,9 @@ namespace DA
 		{
 			try{
                 Database myDatabase = factory.Create("constr");
-                MySqlCommand myCommand = (MySqlCommand) myDatabase.GetStoredProcCommand("suss. SelectSingleprogramaserviciosocial");
+                MySqlCommand myCommand = (MySqlCommand) myDatabase.GetStoredProcCommand("SelectSingleprogramaserviciosocial");
 
-				myCommand.Parameters.Add(CreateInParameter("P_idPrograma", MySqlDbType.Int32, idPrograma));
+				myCommand.Parameters.Add(CreateInParameter("idPrograma", MySqlDbType.Int32, idPrograma));
 
 				return myDatabase.ExecuteDataSet(myCommand);
 			}catch(Exception ex){

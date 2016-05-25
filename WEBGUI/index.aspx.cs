@@ -52,7 +52,7 @@ namespace WEBGUI
             else
             {
 
-                
+
                 Session["UsuarioId"] = Usuarios.getUserNumber();
                 Response.Redirect("~/alumnoMain.aspx" /*+ Usuarios.getUserNumber()*/);
             }

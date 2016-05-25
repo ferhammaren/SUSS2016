@@ -14,7 +14,7 @@ namespace WEBGUI
         protected void Page_Load(object sender, EventArgs e)
         {
             Label nameLabel = (Label)Master.FindControl("lbNombre");
-            System.Diagnostics.Debug.WriteLine(Session["UsuarioId"].ToString());
+          //  System.Diagnostics.Debug.WriteLine(Session["UsuarioId"].ToString());
             if (!Session["UsuarioId"].Equals(""))
             {
                 Alumnos.getInfoAlumno(Convert.ToInt32(Session["UsuarioId"].ToString()));

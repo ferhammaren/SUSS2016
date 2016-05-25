@@ -178,6 +178,16 @@
       <DependentUpon>urMain.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ISW.SUSS2016.CLASES\SUSS2016.CLASES.csproj">
+      <Project>{16758b89-26b6-40c0-87dd-8edf2e5f9e58}</Project>
+      <Name>SUSS2016.CLASES</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SUSS2016.DA\SUSS2016.DA.csproj">
+      <Project>{5df59861-59f7-4df6-8f14-22184326c75d}</Project>
+      <Name>SUSS2016.DA</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
