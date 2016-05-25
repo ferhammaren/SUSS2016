@@ -22,8 +22,8 @@ namespace WEBGUI
             {
                 try
                 {
-                    string 
-                    elegirReporte.SaveAs(Server.MapPath("~/") + filename);
+                  //  string 
+                  //  elegirReporte.SaveAs(Server.MapPath("~/") + filename);
                 }catch(Exception ex)
                 {
                    

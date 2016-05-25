@@ -12,7 +12,7 @@ namespace WEBGUI
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            MainView.ActiveViewIndex = 0;
         }
 
 
@@ -70,8 +70,8 @@ namespace WEBGUI
             }
             else
             {
-
-                Response.Redirect("~/uaMain.aspx?UsuarioId=" + Usuarios.getUserNumber());
+                Session["UsuarioId"] = Usuarios.getUserNumber();
+                Response.Redirect("~/uaMain.aspx");
             }
         }
 
@@ -86,8 +86,8 @@ namespace WEBGUI
             }
             else
             {
-
-                Response.Redirect("~/urMain.aspx?UsuarioId=" + Usuarios.getUserNumber());
+                Session["UsuarioId"] = Usuarios.getUserNumber();
+                Response.Redirect("~/urMain.aspx");
             }
         }
     }
