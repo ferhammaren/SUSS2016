@@ -12,7 +12,7 @@ namespace WEBGUI
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            string pathToFiles = Server.MapPath("/Reportes");
         }
 
         protected void subirReporte_Click(object sender, EventArgs e)
@@ -22,8 +22,7 @@ namespace WEBGUI
             {
                 try
                 {
-                    string 
-                    elegirReporte.SaveAs(Server.MapPath("~/") + filename);
+                    elegirReporte.SaveAs(Server.MapPath("/Reportes") + Path.GetFileName(elegirReporte.FileName));
                 }catch(Exception ex)
                 {
                    
