@@ -21,7 +21,8 @@ namespace SUSS2016.DA
 	/// -----------------------------------------------------------------------------
 	public sealed class UNIDADACADEMICA
 	{
-		private UNIDADACADEMICA() {}
+        private static DatabaseProviderFactory factory = new DatabaseProviderFactory();
+        private UNIDADACADEMICA() {}
 
 		/// -----------------------------------------------------------------------------
 		/// <summary>
@@ -40,8 +41,8 @@ namespace SUSS2016.DA
 		/// -----------------------------------------------------------------------------
 		public static void Insert(int idUA, string descripcion, string direccion, int municipio)
 		{
-			Database myDatabase = DatabaseFactory.CreateDatabase();
-			MySqlCommand myCommand = (MySqlCommand) myDatabase.GetStoredProcCommand("suss.Insertunidadacademica");
+            Database myDatabase = factory.Create("constr");
+            MySqlCommand myCommand = (MySqlCommand) myDatabase.GetStoredProcCommand("suss.Insertunidadacademica");
 
 			myCommand.Parameters.Add(CreateInParameter("P_idUA", MySqlDbType.Int32, idUA));
 			myCommand.Parameters.Add(CreateInParameter("P_descripcion", MySqlDbType.VarChar, descripcion));
@@ -64,8 +65,8 @@ namespace SUSS2016.DA
 		/// -----------------------------------------------------------------------------
 		public static DataSet  SelectSingle(int idUA) 
 		{
-			Database myDatabase = DatabaseFactory.CreateDatabase();
-			MySqlCommand myCommand = (MySqlCommand) myDatabase.GetStoredProcCommand("suss.SelectSingleunidadacademica");
+            Database myDatabase = factory.Create("constr");
+            MySqlCommand myCommand = (MySqlCommand) myDatabase.GetStoredProcCommand("suss.SelectSingleunidadacademica");
 
 			myCommand.Parameters.Add(CreateInParameter("P_idUA", MySqlDbType.Int32, idUA));
 
@@ -85,8 +86,8 @@ namespace SUSS2016.DA
 		/// -----------------------------------------------------------------------------
 		public static DataSet  SelectAll()
 		{
-			Database myDatabase = DatabaseFactory.CreateDatabase();
-			MySqlCommand myCommand = (MySqlCommand) myDatabase.GetStoredProcCommand("suss.SelectAllunidadacademica");
+            Database myDatabase = factory.Create("constr");
+            MySqlCommand myCommand = (MySqlCommand) myDatabase.GetStoredProcCommand("suss.SelectAllunidadacademica");
 
 			return myDatabase.ExecuteDataSet(myCommand);
 		}

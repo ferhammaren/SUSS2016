@@ -22,7 +22,8 @@ namespace SUSS2016.DA
 	/// -----------------------------------------------------------------------------
 	public sealed class INFO_USUARIOS
 	{
-		private INFO_USUARIOS() {}
+        private static DatabaseProviderFactory factory = new DatabaseProviderFactory();
+        private INFO_USUARIOS() {}
 
 		/// -----------------------------------------------------------------------------
 		/// <summary>
@@ -43,8 +44,8 @@ namespace SUSS2016.DA
 		public static Int32 Insert(string ap_paterno, string ap_materno, string nombre, string organizacion, string correo)
 		{
 			try{
-				Database myDatabase = DatabaseFactory.CreateDatabase();
-				MySqlCommand myCommand = (MySqlCommand) myDatabase.GetStoredProcCommand("practica1.Insertinfo_usuarios");
+                Database myDatabase = factory.Create("constr");
+                MySqlCommand myCommand = (MySqlCommand) myDatabase.GetStoredProcCommand("practica1.Insertinfo_usuarios");
 
 				myCommand.Parameters.Add(CreateInParameter("P_ap_paterno", MySqlDbType.VarChar, ap_paterno));
 				myCommand.Parameters.Add(CreateInParameter("P_ap_materno", MySqlDbType.VarChar, ap_materno));
@@ -78,8 +79,8 @@ namespace SUSS2016.DA
 		public static void Delete(int num_usuario)
 		{
 			try{
-				Database myDatabase = DatabaseFactory.CreateDatabase();
-				MySqlCommand myCommand = (MySqlCommand) myDatabase.GetStoredProcCommand("practica1.Deleteinfo_usuarios");
+                Database myDatabase = factory.Create("constr");
+                MySqlCommand myCommand = (MySqlCommand) myDatabase.GetStoredProcCommand("practica1.Deleteinfo_usuarios");
 
 				myCommand.Parameters.Add(CreateInParameter("P_num_usuario", MySqlDbType.Int32, num_usuario));
 
@@ -104,8 +105,8 @@ namespace SUSS2016.DA
 		public static void UpdateByNum_usuario(int num_usuario)
 		{
 			try{
-				Database myDatabase = DatabaseFactory.CreateDatabase();
-				MySqlCommand myCommand = (MySqlCommand) myDatabase.GetStoredProcCommand("practica1.UpdateByinfo_usuariosNum_usuario");
+                Database myDatabase = factory.Create("constr");
+                MySqlCommand myCommand = (MySqlCommand) myDatabase.GetStoredProcCommand("practica1.UpdateByinfo_usuariosNum_usuario");
 
 				myCommand.Parameters.Add(CreateInParameter("P_num_usuario", MySqlDbType.Int32, num_usuario));
 
@@ -131,8 +132,8 @@ namespace SUSS2016.DA
 		public static DataSet  SelectSingle(int num_usuario) 
 		{
 			try{
-				Database myDatabase = DatabaseFactory.CreateDatabase();
-				MySqlCommand myCommand = (MySqlCommand) myDatabase.GetStoredProcCommand("practica1.SelectSingleinfo_usuarios");
+                Database myDatabase = factory.Create("constr");
+                MySqlCommand myCommand = (MySqlCommand) myDatabase.GetStoredProcCommand("practica1.SelectSingleinfo_usuarios");
 
 				myCommand.Parameters.Add(CreateInParameter("P_num_usuario", MySqlDbType.Int32, num_usuario));
 
@@ -159,8 +160,8 @@ namespace SUSS2016.DA
 		public static DataSet  SelectAll()
 		{
 			try{
-				Database myDatabase = DatabaseFactory.CreateDatabase();
-				MySqlCommand myCommand = (MySqlCommand) myDatabase.GetStoredProcCommand("practica1.SelectAllinfo_usuarios");
+                Database myDatabase = factory.Create("constr");
+                MySqlCommand myCommand = (MySqlCommand) myDatabase.GetStoredProcCommand("practica1.SelectAllinfo_usuarios");
 
 				return myDatabase.ExecuteDataSet(myCommand);
 			}catch(Exception ex){

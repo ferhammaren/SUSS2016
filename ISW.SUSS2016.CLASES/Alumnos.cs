@@ -14,7 +14,7 @@ namespace SUSS2016.CLASES
     {
 
         private static Alumno al = new Alumno();
-        private static DataSet ds, da, dc;
+        private static DataSet ds, da, dc,merged;
         public int porc = 0;
 
         public static void getInfoAlumno(int numero)
@@ -22,6 +22,9 @@ namespace SUSS2016.CLASES
             ds = INFOALUMNO.SelectSingle(numero);
             da = UNIDADACADEMICA.SelectSingle(Convert.ToInt32(ds.Tables[0].Rows[0]["unidadAcademica"]));
             dc = PROGRAMAEDUCATIVO.SelectSingle(Convert.ToInt32(ds.Tables[0].Rows[0]["carrera"]));
+            merged=ds;
+            merged.Merge(da);
+            merged.Merge(dc);
             setAlumnoInfo();
         }
 
@@ -38,7 +41,9 @@ namespace SUSS2016.CLASES
             al.fechaTallerSegEtapa = Convert.ToDateTime(ds.Tables[0].Rows[0]["fechaTallerSegundaEtapa"]);
             al.fechaAcPrimEtapa = Convert.ToDateTime(ds.Tables[0].Rows[0]["fechaAcPrimeraEtapa"]);
             al.fechaAcSegEtapa= Convert.ToDateTime(ds.Tables[0].Rows[0]["fechaAcSegundaEtapa"]);
-        }
+          
+                
+                }
 
         //public static String getNombre()
         //{
@@ -47,9 +52,11 @@ namespace SUSS2016.CLASES
         //    return nombre;
         //}
 
-        public static Alumno getAlumno()
+        public static DataSet getAlumno()
         {
-            return al;
+         
+            
+            return merged;
         }
 
         public static String getNombre()

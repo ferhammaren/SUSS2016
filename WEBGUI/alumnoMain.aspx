@@ -14,11 +14,11 @@
                                 <td>
                                     <asp:Label ID="Label1" runat="server" Text="Unidad Académica"></asp:Label>
                                     :
-                                    <asp:Label ID="Label2" runat="server" Text='<%# BIND("ua") %>'></asp:Label>
+                                    <asp:Label ID="Label2" runat="server" Text='<%# BIND("descripcion") %>'></asp:Label>
                                 </td>
                                 <td>
                                     <asp:Label ID="Label3" runat="server" Text="Programa Educativo: "></asp:Label>
-                                    <asp:Label ID="Label4" runat="server" Text='<%# BIND("pe") %>'></asp:Label>
+                                    <asp:Label ID="Label4" runat="server" Text='<%# BIND("descripcion") %>'></asp:Label>
                                 </td>
                                 <td>&nbsp;</td>
                                 <td>&nbsp;</td>
@@ -27,11 +27,11 @@
                             <tr>
                                 <td>
                                     <asp:Label ID="Label5" runat="server" Text="Acreditación 1ra etapa: "></asp:Label>
-                                    <asp:Label ID="Label6" runat="server" Text='<%# BIND("acr1e") %>'></asp:Label>
+                                    <asp:Label ID="Label6" runat="server" Text='<%# BIND("fechaAcPrimeraEtapa") %>'></asp:Label>
                                 </td>
                                 <td>
                                     <asp:Label ID="Label7" runat="server" Text="Acreditación 2da Etapa: "></asp:Label>
-                                    <asp:Label ID="Label8" runat="server" Text='<%# BIND("acr2e") %>'></asp:Label>
+                                    <asp:Label ID="Label8" runat="server" Text='<%# BIND("fechaAcSegundaEtapa") %>'></asp:Label>
                                 </td>
                                 <td>&nbsp;</td>
                                 <td>&nbsp;</td>
@@ -39,10 +39,10 @@
                             </tr>
                             <tr>
                                 <td>Horas 1ra etapa:
-                                    <asp:Label ID="Label9" runat="server" Text='<%# BIND("hrs1") %>'></asp:Label>
+                                    <asp:Label ID="Label9" runat="server" Text='<%# BIND("horasPrimeraEtapa") %>'></asp:Label>
                                 </td>
                                 <td>Horas 2da etapa:
-                                    <asp:Label ID="Label10" runat="server" Text='<%# BIND("hrs2") %>'></asp:Label>
+                                    <asp:Label ID="Label10" runat="server" Text='<%# BIND("horasSegundaEtapa") %>'></asp:Label>
                                 </td>
                                 <td>&nbsp;</td>
                                 <td>&nbsp;</td>
@@ -50,7 +50,7 @@
                             </tr>
                             <tr>
                                 <td>Créditos por carrera:
-                                    <asp:Label ID="Label11" runat="server" Text='<%# BIND("credtotales") %>'></asp:Label>
+                                    <asp:Label ID="Label11" runat="server" Text='<%# BIND("creditosTotales") %>'></asp:Label>
                                 </td>
                                 <td>&nbsp;</td>
                                 <td>&nbsp;</td>
@@ -59,7 +59,7 @@
                             </tr>
                             <tr>
                                 <td>Créditos acumulados:
-                                    <asp:Label ID="Label12" runat="server" Text='<%# BIND("crdacumulados") %>'></asp:Label>
+                                    <asp:Label ID="Label12" runat="server" Text='<%# BIND("creditosCumplidos") %>'></asp:Label>
                                 </td>
                                 <td>&nbsp;% de créditos acumulados: &nbsp;<asp:Label ID="Label13" runat="server" Text='<%# BIND("porcentaje") %>'></asp:Label>
                                 </td>

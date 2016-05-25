@@ -21,7 +21,8 @@ namespace SUSS2016.DA
 	/// -----------------------------------------------------------------------------
 	public sealed class DATOSACCESO
 	{
-		private DATOSACCESO() {}
+        private static DatabaseProviderFactory factory = new DatabaseProviderFactory();
+        private DATOSACCESO() {}
 
 		/// -----------------------------------------------------------------------------
 		/// <summary>
@@ -39,8 +40,8 @@ namespace SUSS2016.DA
 		/// -----------------------------------------------------------------------------
 		public static Int32 Insert(string correo, string pass, int rolUsuario)
 		{
-			Database myDatabase = DatabaseFactory.CreateDatabase();
-			MySqlCommand myCommand = (MySqlCommand) myDatabase.GetStoredProcCommand("suss.Insertdatosacceso");
+            Database myDatabase = factory.Create("constr");
+            MySqlCommand myCommand = (MySqlCommand) myDatabase.GetStoredProcCommand("suss.Insertdatosacceso");
 
 			myCommand.Parameters.Add(CreateInParameter("P_correo", MySqlDbType.VarChar, correo));
 			myCommand.Parameters.Add(CreateInParameter("P_pass", MySqlDbType.VarChar, pass));
@@ -69,8 +70,8 @@ namespace SUSS2016.DA
 		/// -----------------------------------------------------------------------------
 		public static void Update(int numeroUsuario, string correo, string pass, int rolUsuario)
 		{
-			Database myDatabase = DatabaseFactory.CreateDatabase();
-			MySqlCommand myCommand = (MySqlCommand) myDatabase.GetStoredProcCommand("suss.Updatedatosacceso");
+            Database myDatabase = factory.Create("constr");
+            MySqlCommand myCommand = (MySqlCommand) myDatabase.GetStoredProcCommand("suss.Updatedatosacceso");
 
 			myCommand.Parameters.Add(CreateInParameter("P_numeroUsuario", MySqlDbType.Int32, numeroUsuario));
 			myCommand.Parameters.Add(CreateInParameter("P_correo", MySqlDbType.VarChar, correo));
@@ -92,8 +93,8 @@ namespace SUSS2016.DA
 		/// -----------------------------------------------------------------------------
 		public static void Delete(int numeroUsuario)
 		{
-			Database myDatabase = DatabaseFactory.CreateDatabase();
-			MySqlCommand myCommand = (MySqlCommand) myDatabase.GetStoredProcCommand("suss.Deletedatosacceso");
+            Database myDatabase = factory.Create("constr");
+            MySqlCommand myCommand = (MySqlCommand) myDatabase.GetStoredProcCommand("suss.Deletedatosacceso");
 
 			myCommand.Parameters.Add(CreateInParameter("P_numeroUsuario", MySqlDbType.Int32, numeroUsuario));
 
@@ -113,8 +114,8 @@ namespace SUSS2016.DA
 		/// -----------------------------------------------------------------------------
 		public static DataSet  SelectSingle(int numeroUsuario) 
 		{
-			Database myDatabase = DatabaseFactory.CreateDatabase();
-			MySqlCommand myCommand = (MySqlCommand) myDatabase.GetStoredProcCommand("suss.SelectSingledatosacceso");
+            Database myDatabase = factory.Create("constr");
+            MySqlCommand myCommand = (MySqlCommand) myDatabase.GetStoredProcCommand("suss.SelectSingledatosacceso");
 
 			myCommand.Parameters.Add(CreateInParameter("P_numeroUsuario", MySqlDbType.Int32, numeroUsuario));
 
@@ -134,8 +135,8 @@ namespace SUSS2016.DA
 		/// -----------------------------------------------------------------------------
 		public static DataSet  SelectAll()
 		{
-			Database myDatabase = DatabaseFactory.CreateDatabase();
-			MySqlCommand myCommand = (MySqlCommand) myDatabase.GetStoredProcCommand("suss.SelectAlldatosacceso");
+            Database myDatabase = factory.Create("constr");
+            MySqlCommand myCommand = (MySqlCommand) myDatabase.GetStoredProcCommand("suss.SelectAlldatosacceso");
 
 			return myDatabase.ExecuteDataSet(myCommand);
 		}
