@@ -7,11 +7,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace WEBGUI
+namespace SUSS2016
 {
 
 
-    public partial class alumnoReporte
+    public partial class urSolicitudesPendientes
     {
     }
 }
