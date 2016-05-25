@@ -56,17 +56,20 @@
         </tr>
     </table>
     <div>
+        <asp:Menu ID="menuReceptor" runat="server" Orientation="Horizontal">
+            <Items>
+                <asp:MenuItem NavigateUrl="~/urMain.aspx" Text="Principal" Value="Principal"></asp:MenuItem>
+                <asp:MenuItem Text="Solicitudes" Value="Solicitudes">
+                    <asp:MenuItem NavigateUrl="~/urReportesPendientes.aspx" Text="Programas de Servicio Social" Value="Programas de Servicio Social"></asp:MenuItem>
+                    <asp:MenuItem NavigateUrl="~/urSolicitudesPendientes.aspx" Text="Reportes de Servicio Social" Value="Reportes de Servicio Social"></asp:MenuItem>
+                </asp:MenuItem>
+            </Items>
+        </asp:Menu>
+        <br />
         <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
         
-            <asp:Menu ID="menuReceptor" runat="server">
-                <Items>
-                    <asp:MenuItem Text="Principal" Value="Principal"></asp:MenuItem>
-                    <asp:MenuItem Text="New Item" Value="New Item">
-                        <asp:MenuItem Text="New Item" Value="New Item"></asp:MenuItem>
-                        <asp:MenuItem Text="New Item" Value="New Item"></asp:MenuItem>
-                    </asp:MenuItem>
-                </Items>
-            </asp:Menu>
+            <br />
+            <br />
             <br />
         
         </asp:ContentPlaceHolder>
