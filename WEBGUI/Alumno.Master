@@ -4,31 +4,15 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
+    <title>Sistema Universitario de Servicio Social :: Alumno</title>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
-    <style type="text/css">
-        .auto-style1 {
-            width: 100%;
-        }
-        .auto-style2 {
-            width: 163px;
-        }
-        .auto-style3 {
-            width: 512px;
-        }
-        .auto-style4 {
-            width: 512px;
-            height: 23px;
-        }
-        .auto-style5 {
-            height: 23px;
-        }
-    </style>
+ <link rel="stylesheet" type="text/css" href="estilo.css">
 </head>
 <body>
     <form id="form1" runat="server">
-        <table class="auto-style1">
+        <header>
+            <table>
             <tr>
             <td>
         <asp:Image ID="Image1" runat="server" Height="114px" ImageUrl="~\imagenes\logoUABC.jpg" Width="78px" />
@@ -43,11 +27,13 @@
                 <td>&nbsp;</td>
             </tr>
             </table>
+        </header>
+        
         <table class="auto-style1">
-            <tr><td class="auto-style4"></td><td class="auto-style5" style="text-align: right">Bienvenid@
+            <tr><td class="auto-style4" style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; font-size: large; width: 100%"></td><td class="auto-style5" style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; font-size: large; width: 100%;">Bienvenid@
                 <asp:Label ID="lbNombre" runat="server" Text="nombreCompleto"></asp:Label>
                 </td></tr>
-            <tr><td class="auto-style3">&nbsp;</td><td style="text-align: right">
+            <tr><td class="auto-style3" style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; font-size: large; width: 100%">&nbsp;</td><td style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; font-size: large; width: 100%;">
                 <asp:HyperLink ID="HyperLink1" runat="server">Cerrar Sesión</asp:HyperLink>
                 </td></tr>
             </table>
@@ -55,7 +41,7 @@
     <div>
          <table class="auto-style1">
              <tr>
-                 <td class="auto-style2">
+                 <td class="auto-style1">
          <asp:Menu ID="Menu1" runat="server">
                 <Items>
                     <asp:MenuItem NavigateUrl="~/alumnoMain.aspx" Text="Principal" Value="Principal"></asp:MenuItem>
@@ -117,5 +103,7 @@
     
     </div>
     </form>
+      <footer>Elaborado por: Luisa Fernanda Meza López y Edgar Alan Cebrero López</footer>
 </body>
+
 </html>

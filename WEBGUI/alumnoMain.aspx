@@ -4,7 +4,15 @@
     .auto-style3 {
         width: 50%;
     }
-</style>
+        .auto-style6 {
+            width: 512px;
+            height: 37px;
+        }
+        .auto-style7 {
+            width: 100%;
+            height: 37px;
+        }
+    </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <table class="auto-style1">
@@ -34,6 +42,25 @@
 </asp:TemplateField>
                 </Columns>
             </asp:GridView>
+        </td>
+    </tr>
+    <tr>
+        <td class="auto-style6"></td>
+        <td class="auto-style7">
+            <asp:ObjectDataSource ID="programaActivo" runat="server"></asp:ObjectDataSource>
+        </td>
+    </tr>
+    <tr>
+        <td class="auto-style3">&nbsp;</td>
+        <td style="width: 100%">Programas Completados<br />
+            <asp:GridView ID="GridView2" runat="server" AutoGenerateColumns="False">
+                <Columns>
+                    <asp:BoundField DataField="nombrePrograma" HeaderText="Programa" />
+                    <asp:BoundField DataField="horas" HeaderText="Horas Acreditadas" />
+                    <asp:BoundField DataField="etapa" HeaderText="Etapa" />
+                </Columns>
+            </asp:GridView>
+            <asp:ObjectDataSource ID="programasPasados" runat="server" SelectMethod="SelectAll" TypeName="SUSS2016.DA.PROGRAMASASIGNADOS"></asp:ObjectDataSource>
         </td>
     </tr>
 </table>

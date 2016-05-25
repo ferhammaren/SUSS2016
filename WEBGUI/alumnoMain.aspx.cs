@@ -15,7 +15,7 @@ namespace WEBGUI
         {
             Label nameLabel = (Label)Master.FindControl("lbNombre");
           //  System.Diagnostics.Debug.WriteLine(Session["UsuarioId"].ToString());
-            if (!Session["UsuarioId"].Equals(""))
+            if (Session["UsuarioId"]!=null)
             {
                 Alumnos.getInfoAlumno(Convert.ToInt32(Session["UsuarioId"].ToString()));
              
@@ -23,7 +23,10 @@ namespace WEBGUI
             }
             else
             {
-
+                Literal ltr = new Literal();
+                ltr.Text = @"<script type='text/javascript'> alert('No iniciaste sesión') </script>";
+                this.Controls.Add(ltr);
+                Response.Redirect("~/index.aspx");
             }
         }
 

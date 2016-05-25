@@ -7,11 +7,7 @@
     <title>Sistema Universitario de Servicio Social</title>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
-    <style type="text/css">
-        .auto-style1 {
-            width: 100%;
-        }
-    </style>
+   <link rel="stylesheet" type="text/css" href="estilo.css">
 </head>
 <body>
     <form id="form1" runat="server">
@@ -65,6 +61,7 @@
         </asp:ContentPlaceHolder>
     </div>
     </form>
+      <footer>Elaborado por: Luisa Fernanda Meza López y Edgar Alan Cebrero López</footer>
 </body>
-    <footer>Elaborado por: Luisa Fernanda Meza López y Edgar Alan Cebrero López</footer>
+  
 </html>

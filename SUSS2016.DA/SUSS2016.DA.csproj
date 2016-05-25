@@ -54,11 +54,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DATOSACCESO.cs" />
+    <Compile Include="ENCARGADOSUA.cs" />
     <Compile Include="INFOALUMNO.cs" />
     <Compile Include="INFO_USUARIOS.cs" />
+    <Compile Include="PROGRAMASASIGNADOS.cs" />
     <Compile Include="PROGRAMASERVICIOSOCIAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SOLICITUDES.cs" />
+    <Compile Include="SOLICITUDESPENDIENTESUA.cs" />
+    <Compile Include="SOLICITUDESPENDIENTESUR.cs" />
     <Compile Include="USUARIOS.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

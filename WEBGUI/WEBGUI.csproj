@@ -71,6 +71,7 @@
     <Content Include="alumnoReporte.aspx" />
     <Content Include="alumnoSolicitud.aspx" />
     <Content Include="alumnoSolicitudAsignacion.aspx" />
+    <Content Include="estilo.css" />
     <Content Include="index.aspx" />
     <Content Include="packages.config" />
     <Content Include="Alumno.Master" />
