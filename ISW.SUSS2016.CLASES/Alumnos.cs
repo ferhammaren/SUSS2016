@@ -64,9 +64,9 @@ namespace SUSS2016.CLASES
             return al.nombre + " " + al.ap_paterno + " " + al.ap_materno + " ";
 
         }
-        public static String getMatricula()
+        public static int getMatricula()
         {
-            return al.matricula + "";
+            return al.matricula;
         }
     }
 }

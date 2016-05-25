@@ -20,6 +20,7 @@ namespace WEBGUI
                 Alumnos.getInfoAlumno(Convert.ToInt32(Session["UsuarioId"].ToString()));
              
                 nameLabel.Text = Alumnos.getNombre();
+                Session["matriculaAlumno"] = Alumnos.getMatricula();
             }
             else
             {

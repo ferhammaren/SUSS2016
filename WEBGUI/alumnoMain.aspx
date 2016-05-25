@@ -7,7 +7,7 @@
     <table style="width:100%">
         <tr>
             <td>
-                <asp:FormView ID="FormView1" runat="server" Width="100%">
+                <asp:FormView ID="FormView1" runat="server" Width="100%" DataSourceID="infoAlumno">
                     <ItemTemplate>
                         <table class="placeholder">
                             <tr>
@@ -61,7 +61,7 @@
                                 <td>Créditos acumulados:
                                     <asp:Label ID="Label12" runat="server" Text='<%# BIND("creditosCumplidos") %>'></asp:Label>
                                 </td>
-                                <td>&nbsp;% de créditos acumulados: &nbsp;<asp:Label ID="Label13" runat="server" Text='<%# BIND("porcentaje") %>'></asp:Label>
+                                <td>&nbsp;% de créditos acumulados: &nbsp;<asp:Label ID="Label13" runat="server"></asp:Label>
                                 </td>
                                 <td>&nbsp;</td>
                                 <td>&nbsp;</td>
@@ -79,10 +79,10 @@
         </tr>
         <tr>
             <td>Programa Activo<br />
-                <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" Width="100%">
+                <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" Width="100%" DataSourceID="programaActivo">
                     <Columns>
                         <asp:BoundField HeaderText="Id Programa" />
-                        <asp:BoundField HeaderText="Nombre del Programa" />
+                        <asp:BoundField HeaderText="Nombre del Programa" DataField="nombrePrograma" />
                         <asp:TemplateField>
                             <ItemTemplate>
                                 <asp:Button ID="btnGenerar" runat="server" OnClick="MyButtonClick" Text="Generar Reporte" />
@@ -94,19 +94,28 @@
         </tr>
         <tr>
             <td class="auto-style7">
-                <asp:ObjectDataSource ID="programaActivo" runat="server"></asp:ObjectDataSource>
+                <asp:ObjectDataSource ID="programaActivo" runat="server" SelectMethod="SelectActivo" TypeName="SUSS2016.DA.PROGRAMASASIGNADOS">
+                    <SelectParameters>
+                        <asp:SessionParameter Name="matricula" SessionField="matriculaAlumno" Type="Int32" />
+                    </SelectParameters>
+                </asp:ObjectDataSource>
             </td>
         </tr>
         <tr>
             <td class="auto-style8">Programas Completados<br />
-                <asp:GridView ID="GridView2" runat="server" AutoGenerateColumns="False" Width="100%">
+                <asp:GridView ID="GridView2" runat="server" AutoGenerateColumns="False" Width="100%" DataSourceID="programasPasados">
                     <Columns>
+                        <asp:BoundField DataField="etapa" HeaderText="Etapa" />
                         <asp:BoundField DataField="nombrePrograma" HeaderText="Programa" />
                         <asp:BoundField DataField="horas" HeaderText="Horas Acreditadas" />
-                        <asp:BoundField DataField="etapa" HeaderText="Etapa" />
+                        <asp:BoundField DataField="fechaFin" HeaderText="Fecha de finalización" />
                     </Columns>
                 </asp:GridView>
-                <asp:ObjectDataSource ID="programasPasados" runat="server" SelectMethod="SelectAll" TypeName="SUSS2016.DA.PROGRAMASASIGNADOS"></asp:ObjectDataSource>
+                <asp:ObjectDataSource ID="programasPasados" runat="server" SelectMethod="SelectAll" TypeName="SUSS2016.DA.PROGRAMASASIGNADOS">
+                    <SelectParameters>
+                        <asp:SessionParameter Name="matricula" SessionField="matriculaAlumno" Type="Int32" />
+                    </SelectParameters>
+                </asp:ObjectDataSource>
             </td>
         </tr>
     </table>
