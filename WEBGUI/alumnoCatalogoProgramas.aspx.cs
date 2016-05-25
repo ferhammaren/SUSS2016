@@ -20,6 +20,11 @@ namespace WEBGUI
                 Alumnos.getInfoAlumno(Convert.ToInt32(Session["UsuarioId"].ToString()));
 
                 nameLabel.Text = Alumnos.getNombre();
+                if (Session["Etapa"] == null)
+                {
+                    Session["Etapa"] = 1;
+                }
+
             }
             else
             {
@@ -39,5 +44,15 @@ namespace WEBGUI
             Session["programaSelected"] = Convert.ToInt32(gvr.Cells[0].Text);
             Response.Redirect("~/alumnoSolicitudAsignacion.aspx");
         }
+
+
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            Session["Etapa"] = DropDownList1.SelectedValue;
+            Response.Redirect("~/alumnoCatalogoProgramas.aspx");
+        }
+
+
     }
 }

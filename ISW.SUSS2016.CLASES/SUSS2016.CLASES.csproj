@@ -48,6 +48,7 @@
     <Compile Include="Modelos\Receptor.cs" />
     <Compile Include="Modelos\Usuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="solicitudesAsignación.cs" />
     <Compile Include="Usuarios.cs" />
   </ItemGroup>
   <ItemGroup>

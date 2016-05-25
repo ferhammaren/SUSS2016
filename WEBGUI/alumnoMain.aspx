@@ -103,7 +103,7 @@
         </tr>
         <tr>
             <td class="auto-style8">Programas Completados<br />
-                <asp:GridView ID="GridView2" runat="server" AutoGenerateColumns="False" Width="100%" DataSourceID="programasPasados">
+                <asp:GridView ID="GridView2" runat="server" AutoGenerateColumns="False" Width="100%" DataSourceID="programasPasados" OnSelectedIndexChanged="GridView2_SelectedIndexChanged">
                     <Columns>
                         <asp:BoundField DataField="etapa" HeaderText="Etapa" />
                         <asp:BoundField DataField="nombrePrograma" HeaderText="Programa" />

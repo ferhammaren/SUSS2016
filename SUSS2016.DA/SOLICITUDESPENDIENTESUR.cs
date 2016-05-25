@@ -43,13 +43,13 @@ namespace SUSS2016.DA
 		/// 	[Fer]	5/25/2016 12:23:20 AM	Created
 		/// </history>
 		/// -----------------------------------------------------------------------------
-		public static void Insert(int idSolicitud, int idPrograma, int matricula, DateTime fechaAsignacion, DateTime fechaConclusion, string horarioAlumno, string horarioPrestacion)
+		public static void Insert(int idPrograma, int matricula, DateTime fechaAsignacion, DateTime fechaConclusion, string horarioAlumno, string horarioPrestacion)
 		{
 			try{
                 Database myDatabase = factory.Create("constr");
                 MySqlCommand myCommand = (MySqlCommand) myDatabase.GetStoredProcCommand("Insertsolicitudespendientesur");
 
-				myCommand.Parameters.Add(CreateInParameter("P_idSolicitud", MySqlDbType.Int32, idSolicitud));
+				
 				myCommand.Parameters.Add(CreateInParameter("P_idPrograma", MySqlDbType.Int32, idPrograma));
 				myCommand.Parameters.Add(CreateInParameter("P_matricula", MySqlDbType.Int32, matricula));
 				myCommand.Parameters.Add(CreateInParameter("P_fechaAsignacion", MySqlDbType.DateTime, fechaAsignacion));
@@ -89,8 +89,16 @@ namespace SUSS2016.DA
 				return new DataSet();
 			}
 		}
+        public static void Delete(int matricula)
+        {
+            Database myDatabase = DatabaseFactory.CreateDatabase();
+            MySqlCommand myCommand = (MySqlCommand)myDatabase.GetStoredProcCommand("deleteSolicitudUR");
 
-		private static MySqlParameter CreateInParameter(string paramName, MySqlDbType dbType, object value)
+            myCommand.Parameters.Add(CreateInParameter("matricula", MySqlDbType.Int32, matricula));
+
+            myDatabase.ExecuteNonQuery(myCommand);
+        }
+        private static MySqlParameter CreateInParameter(string paramName, MySqlDbType dbType, object value)
 		{
 			MySqlParameter parameter = new MySqlParameter(paramName, dbType);
 			parameter.Direction = ParameterDirection.Input;
