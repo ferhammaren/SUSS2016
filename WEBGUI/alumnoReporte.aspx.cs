@@ -82,5 +82,10 @@ namespace WEBGUI
                 }
             }
         }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            System.IO.FileInfo Dfile = new System.IO.FileInfo(serverPath);
+        }
     }
 }

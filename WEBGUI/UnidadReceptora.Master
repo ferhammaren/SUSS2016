@@ -58,6 +58,17 @@
     <div>
         <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
         
+            <asp:Menu ID="menuReceptor" runat="server">
+                <Items>
+                    <asp:MenuItem Text="Principal" Value="Principal"></asp:MenuItem>
+                    <asp:MenuItem Text="New Item" Value="New Item">
+                        <asp:MenuItem Text="New Item" Value="New Item"></asp:MenuItem>
+                        <asp:MenuItem Text="New Item" Value="New Item"></asp:MenuItem>
+                    </asp:MenuItem>
+                </Items>
+            </asp:Menu>
+            <br />
+        
         </asp:ContentPlaceHolder>
     </div>
     </form>

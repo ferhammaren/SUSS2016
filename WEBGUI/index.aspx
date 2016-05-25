@@ -74,7 +74,7 @@
                         <td style="text-align: center; vertical-align: middle">
 
                             <asp:Label ID="Label4" runat="server" Text="Contraseña: "></asp:Label>
-                            <input id="tbUAPass" type="password" />
+                            &nbsp;<asp:TextBox ID="tbUAPass" runat="server" TextMode="Password"></asp:TextBox>
 
                         </td>
                     </tr>
@@ -104,7 +104,7 @@
                         <td style="text-align: center; vertical-align: middle">
 
                             <asp:Label ID="Label6" runat="server" Text="Contraseña: "></asp:Label>
-                            <input id="tbURPass" type="password" />
+                            &nbsp;<asp:TextBox ID="tbURPass" runat="server" TextMode="Password"></asp:TextBox>
 
                         </td>
                     </tr>
