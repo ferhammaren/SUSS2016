@@ -97,9 +97,11 @@
                                 <td __designer:mapid="1c3">Horario de prestación</td>
                                 <td __designer:mapid="1c4">&nbsp;</td>
                                 <td __designer:mapid="1c5">
-                                    <asp:FileUpload ID="fuHoraPrestacion" runat="server" />
+                                   
+                                    <asp:FileUpload ID="fuHoraPrestacion" accept="text/" runat="server" />
                                 </td>
                                 <td __designer:mapid="1c7">
+                                    <asp:Button ID="btnPrestacion" runat="server" OnClick="btnPrestacion_Click" Text="Subir Archivo" />
                                     <asp:Label ID="statusLabel" runat="server"></asp:Label>
                                 </td>
                                 <td __designer:mapid="1c8">Descargar formato de horario</td>
@@ -108,9 +110,11 @@
                                 <td __designer:mapid="1ca">Horario de clases</td>
                                 <td __designer:mapid="1cb">&nbsp;</td>
                                 <td __designer:mapid="1cc">
-                                    <asp:FileUpload ID="fuHoraClases" runat="server" />
+                                  
+                                    <asp:FileUpload ID="fuHoraClases" accept="text/" runat="server" />
                                 </td>
                                 <td __designer:mapid="1ce">
+                                    <asp:Button ID="Button2" runat="server" OnClick="Button2_Click" Text="Subir Archivo" />
                                     <asp:Label ID="statusLabel1" runat="server"></asp:Label>
                                 </td>
                                 <td __designer:mapid="1cf">Descargar horario de clases</td>
