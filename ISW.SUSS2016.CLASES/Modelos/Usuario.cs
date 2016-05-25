@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Proyecto_ISW
 {
-    abstract class Usuario 
+    public abstract class Usuario 
     {
         private string idUsuario { get; set; }
         private string pwd { get; set; }

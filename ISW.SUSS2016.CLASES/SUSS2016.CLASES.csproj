@@ -49,6 +49,7 @@
     <Compile Include="Modelos\Usuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="solicitudesAsignacion.cs" />
+    <Compile Include="unidadReceptora.cs" />
     <Compile Include="Usuarios.cs" />
   </ItemGroup>
   <ItemGroup>

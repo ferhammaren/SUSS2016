@@ -59,23 +59,32 @@ namespace SUSS2016.DA
 				
 			}
 		}
+        public static DataSet SelectSingle(int numUsuario)
+        {
+            Database myDatabase = factory.Create("constr");
+            MySqlCommand myCommand = (MySqlCommand)myDatabase.GetStoredProcCommand("SelectEncUAByUserId");
 
-		/// -----------------------------------------------------------------------------
-		/// <summary>
-		/// Updates a record in the ENCARGADOSUA table.
-		/// <summary>
-		/// <param name="idEncargado"></param>
-		/// <param name="nombre"></param>
-		/// <param name="ap_paterno"></param>
-		/// <param name="ap_materno"></param>
-		/// <param name="idUA"></param>
-		/// <remarks>
-		/// </remarks>
-		/// <history>
-		/// 	[Fer]	5/25/2016 12:23:20 AM	Created
-		/// </history>
-		/// -----------------------------------------------------------------------------
-		public static void Update(int idEncargado, string nombre, int ap_paterno, int ap_materno, int idUA)
+            myCommand.Parameters.Add(CreateInParameter("userId", MySqlDbType.Int32, numUsuario));
+
+            return myDatabase.ExecuteDataSet(myCommand);
+        }
+
+        /// -----------------------------------------------------------------------------
+        /// <summary>
+        /// Updates a record in the ENCARGADOSUA table.
+        /// <summary>
+        /// <param name="idEncargado"></param>
+        /// <param name="nombre"></param>
+        /// <param name="ap_paterno"></param>
+        /// <param name="ap_materno"></param>
+        /// <param name="idUA"></param>
+        /// <remarks>
+        /// </remarks>
+        /// <history>
+        /// 	[Fer]	5/25/2016 12:23:20 AM	Created
+        /// </history>
+        /// -----------------------------------------------------------------------------
+        public static void Update(int idEncargado, string nombre, int ap_paterno, int ap_materno, int idUA)
 		{
 			try{
                 Database myDatabase = factory.Create("constr");

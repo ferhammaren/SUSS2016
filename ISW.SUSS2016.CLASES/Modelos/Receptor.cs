@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace Proyecto_ISW.Clases
 {
-    class Receptor : Usuario
+    public class Receptor : Usuario
     {
-        private string nombre { get; set; }
-        private string ap_paterno { get; set; }
-        private string ap_materno { get; set; }
-        private int idReceptor { get; set; }
+        public string nombre { get; set; }
+        public string ap_paterno { get; set; }
+        public string ap_materno { get; set; }
+        public int idReceptor { get; set; }
 
         public Receptor(string nombre, string ap_paterno, string ap_matenro, int idReceptor)
         {
