@@ -36,6 +36,15 @@
                                 <td>&nbsp;</td>
                             </tr>
                             <tr>
+                                <td>Etapa</td>
+                                <td>
+                                    <asp:Label ID="Label4" runat="server" Text='<%# BIND("ETAPA") %>'></asp:Label>
+                                </td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                            </tr>
+                            <tr>
                                 <td>&nbsp;</td>
                                 <td>&nbsp;</td>
                                 <td>&nbsp;</td>
@@ -46,6 +55,61 @@
                                 <td>&nbsp;</td>
                                 <td>&nbsp;</td>
                                 <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                            </tr>
+                        </table>
+                    </ItemTemplate>
+                </asp:FormView>
+                <asp:FormView ID="FormView2" runat="server">
+                    <ItemTemplate>
+                        <table class="auto-style1">
+                            <tr>
+                                <td>Fecha de Asignación<br />
+                                    <asp:Calendar ID="Calendar1" runat="server"></asp:Calendar>
+                                </td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>Fecha Estimada de conclusión<asp:Calendar ID="Calendar2" runat="server"></asp:Calendar>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td>Horario de prestación</td>
+                                <td>&nbsp;</td>
+                                <td>
+                                    <asp:FileUpload ID="fuHoraPrestacion" runat="server" />
+                                </td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td>Horario de clases</td>
+                                <td>&nbsp;</td>
+                                <td>
+                                    <asp:FileUpload ID="fuHoraClases" runat="server" />
+                                </td>
                                 <td>&nbsp;</td>
                                 <td>&nbsp;</td>
                             </tr>
@@ -59,6 +123,8 @@
                         </table>
                     </ItemTemplate>
                 </asp:FormView>
+                <br />
+                <asp:ObjectDataSource ID="ObjectDataSource2" runat="server"></asp:ObjectDataSource>
                 <asp:ObjectDataSource ID="ObjectDataSource1" runat="server" SelectMethod="SelectSingle" TypeName="DA.PROGRAMASERVICIOSOCIAL">
                     <SelectParameters>
                         <asp:SessionParameter Name="idPrograma" SessionField="programaSelected" Type="Int32" />
