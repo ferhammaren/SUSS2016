@@ -1,0 +1,121 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Alumno.master.cs" Inherits="WEBGUI.Alumno" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style1 {
+            width: 100%;
+        }
+        .auto-style2 {
+            width: 163px;
+        }
+        .auto-style3 {
+            width: 512px;
+        }
+        .auto-style4 {
+            width: 512px;
+            height: 23px;
+        }
+        .auto-style5 {
+            height: 23px;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <table class="auto-style1">
+            <tr>
+            <td>
+        <asp:Image ID="Image1" runat="server" Height="114px" ImageUrl="~\imagenes\logoUABC.jpg" Width="78px" />
+            </td>
+            <td style="text-align: center; vertical-align: middle">Universidad Autónoma de Baja California
+                <br />
+                Coordinación de Formación Básica
+                <br />
+                Coordinación de Formación Profesional y Vinculación Universitaria<br />
+                Sistema Universitario de Servicio Social</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            </table>
+        <table class="auto-style1">
+            <tr><td class="auto-style4"></td><td class="auto-style5" style="text-align: right">Bienvenid@
+                <asp:Label ID="lbNombre" runat="server" Text="nombreCompleto"></asp:Label>
+                </td></tr>
+            <tr><td class="auto-style3">&nbsp;</td><td style="text-align: right">
+                <asp:HyperLink ID="HyperLink1" runat="server">Cerrar Sesión</asp:HyperLink>
+                </td></tr>
+            </table>
+        
+    <div>
+         <table class="auto-style1">
+             <tr>
+                 <td class="auto-style2">
+         <asp:Menu ID="Menu1" runat="server">
+                <Items>
+                    <asp:MenuItem NavigateUrl="~/alumnoMain.aspx" Text="Principal" Value="Principal"></asp:MenuItem>
+                    <asp:MenuItem NavigateUrl="~/alumnoCatalogoProgramas.aspx" Text="Catálogo de programas" Value="Catálogo de programas"></asp:MenuItem>
+                    <asp:MenuItem Text="Taller de Servicio Social" Value="Taller de Servicio Social">
+                        <asp:MenuItem Text="Información de Servicio Social" Value="Información de Servicio Social"></asp:MenuItem>
+                        <asp:MenuItem Text="Presentar Taller en línea" Value="Presentar Taller en línea"></asp:MenuItem>
+                    </asp:MenuItem>
+                    <asp:MenuItem Text="Actualizar datos" Value="Actualizar datos"></asp:MenuItem>
+                    <asp:MenuItem Text="Contáctanos" Value="Contáctanos"></asp:MenuItem>
+                </Items>
+            </asp:Menu>
+                 </td>
+                 <td>    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+           
+                     <table class="auto-style1">
+                         <tr>
+                             <td>&nbsp;</td>
+                             <td>&nbsp;</td>
+                             <td>&nbsp;</td>
+                             <td>&nbsp;</td>
+                             <td>&nbsp;</td>
+                         </tr>
+                         <tr>
+                             <td>&nbsp;</td>
+                             <td>&nbsp;</td>
+                             <td>&nbsp;</td>
+                             <td>&nbsp;</td>
+                             <td>&nbsp;</td>
+                         </tr>
+                         <tr>
+                             <td>&nbsp;</td>
+                             <td>&nbsp;</td>
+                             <td>&nbsp;</td>
+                             <td>&nbsp;</td>
+                             <td>&nbsp;</td>
+                         </tr>
+                         <tr>
+                             <td>&nbsp;</td>
+                             <td>&nbsp;</td>
+                             <td>&nbsp;</td>
+                             <td>&nbsp;</td>
+                             <td>&nbsp;</td>
+                         </tr>
+                         <tr>
+                             <td>&nbsp;</td>
+                             <td>&nbsp;</td>
+                             <td>&nbsp;</td>
+                             <td>&nbsp;</td>
+                             <td>&nbsp;</td>
+                         </tr>
+                     </table>
+        
+           
+        </asp:ContentPlaceHolder></td>
+             </tr>
+         </table>
+    
+    </div>
+    </form>
+</body>
+</html>
