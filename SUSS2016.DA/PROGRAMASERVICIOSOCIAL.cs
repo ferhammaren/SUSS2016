@@ -116,13 +116,13 @@ namespace DA
 		/// 	[Fer]	5/24/2016 10:54:37 AM	Created
 		/// </history>
 		/// -----------------------------------------------------------------------------
-		public static DataSet  SelectAll()
+		public static DataSet  SelectAll(int etapa)
 		{
 			try{
                 Database myDatabase = factory.Create("constr");
                 MySqlCommand myCommand = (MySqlCommand) myDatabase.GetStoredProcCommand("SelectAllprogramaserviciosocial");
-
-				return myDatabase.ExecuteDataSet(myCommand);
+                myCommand.Parameters.Add(CreateInParameter("etapa", MySqlDbType.Int32, etapa));
+                return myDatabase.ExecuteDataSet(myCommand);
 			}catch(Exception ex){
 				bool rethrow = ExceptionPolicy.HandleException(ex, "yoo");
 				if(rethrow)

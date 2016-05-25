@@ -42,5 +42,10 @@ namespace WEBGUI
             Session["programaSelected"] = Convert.ToInt32(gvr.Cells[0].Text);
             Response.Redirect("~/alumnoReporte.aspx");
         }
+
+        protected void GridView2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

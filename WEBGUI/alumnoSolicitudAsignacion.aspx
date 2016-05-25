@@ -75,54 +75,56 @@
                         </table>
                     </ItemTemplate>
                 </asp:FormView>
-                <asp:FormView ID="FormView2" runat="server">
-                    <ItemTemplate>
-                        <table class="auto-style1">
-                            <tr>
-                                <td>Fecha de Asignación<br />
+                        <table class="auto-style1" __designer:mapid="1b2">
+                            <tr __designer:mapid="1b3">
+                                <td __designer:mapid="1b4">Fecha de Asignación<br __designer:mapid="1b5" />
                                     <asp:Calendar ID="Calendar1" runat="server"></asp:Calendar>
                                 </td>
-                                <td>&nbsp;</td>
-                                <td>&nbsp;</td>
-                                <td>&nbsp;</td>
-                                <td>Fecha Estimada de conclusión<asp:Calendar ID="Calendar2" runat="server"></asp:Calendar>
+                                <td __designer:mapid="1b7">&nbsp;</td>
+                                <td __designer:mapid="1b8">&nbsp;</td>
+                                <td __designer:mapid="1b9">&nbsp;</td>
+                                <td __designer:mapid="1ba">Fecha Estimada de conclusión<asp:Calendar ID="Calendar2" runat="server"></asp:Calendar>
                                 </td>
                             </tr>
-                            <tr>
-                                <td>&nbsp;</td>
-                                <td>&nbsp;</td>
-                                <td>&nbsp;</td>
-                                <td>&nbsp;</td>
-                                <td>&nbsp;</td>
+                            <tr __designer:mapid="1bc">
+                                <td __designer:mapid="1bd">&nbsp;</td>
+                                <td __designer:mapid="1be">&nbsp;</td>
+                                <td __designer:mapid="1bf">&nbsp;</td>
+                                <td __designer:mapid="1c0">&nbsp;</td>
+                                <td __designer:mapid="1c1">&nbsp;</td>
                             </tr>
-                            <tr>
-                                <td>Horario de prestación</td>
-                                <td>&nbsp;</td>
-                                <td>
+                            <tr __designer:mapid="1c2">
+                                <td __designer:mapid="1c3">Horario de prestación</td>
+                                <td __designer:mapid="1c4">&nbsp;</td>
+                                <td __designer:mapid="1c5">
                                     <asp:FileUpload ID="fuHoraPrestacion" runat="server" />
                                 </td>
-                                <td>&nbsp;</td>
-                                <td>&nbsp;</td>
+                                <td __designer:mapid="1c7">
+                                    <asp:Label ID="statusLabel" runat="server"></asp:Label>
+                                </td>
+                                <td __designer:mapid="1c8">Descargar formato de horario</td>
                             </tr>
-                            <tr>
-                                <td>Horario de clases</td>
-                                <td>&nbsp;</td>
-                                <td>
+                            <tr __designer:mapid="1c9">
+                                <td __designer:mapid="1ca">Horario de clases</td>
+                                <td __designer:mapid="1cb">&nbsp;</td>
+                                <td __designer:mapid="1cc">
                                     <asp:FileUpload ID="fuHoraClases" runat="server" />
                                 </td>
-                                <td>&nbsp;</td>
-                                <td>&nbsp;</td>
+                                <td __designer:mapid="1ce">
+                                    <asp:Label ID="statusLabel1" runat="server"></asp:Label>
+                                </td>
+                                <td __designer:mapid="1cf">Descargar horario de clases</td>
                             </tr>
-                            <tr>
-                                <td>&nbsp;</td>
-                                <td>&nbsp;</td>
-                                <td>&nbsp;</td>
-                                <td>&nbsp;</td>
-                                <td>&nbsp;</td>
+                            <tr __designer:mapid="1d0">
+                                <td __designer:mapid="1d1">
+                                    <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" OnCommand="Button1_Command" Text="Enviar Solicitud de Asignación" />
+                                </td>
+                                <td __designer:mapid="1d2">&nbsp;</td>
+                                <td __designer:mapid="1d3">&nbsp;</td>
+                                <td __designer:mapid="1d4">&nbsp;</td>
+                                <td __designer:mapid="1d5">&nbsp;</td>
                             </tr>
                         </table>
-                    </ItemTemplate>
-                </asp:FormView>
                 <br />
                 <asp:ObjectDataSource ID="ObjectDataSource2" runat="server"></asp:ObjectDataSource>
                 <asp:ObjectDataSource ID="ObjectDataSource1" runat="server" SelectMethod="SelectSingle" TypeName="DA.PROGRAMASERVICIOSOCIAL">
