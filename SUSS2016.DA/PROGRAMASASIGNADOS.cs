@@ -122,13 +122,13 @@ namespace SUSS2016.DA
 		/// 	[Fer]	5/25/2016 12:23:20 AM	Created
 		/// </history>
 		/// -----------------------------------------------------------------------------
-		public static DataSet  SelectAll()
+		public static DataSet  SelectAll(int matricula)
 		{
 			try{
                 Database myDatabase = factory.Create("constr");
                 MySqlCommand myCommand = (MySqlCommand) myDatabase.GetStoredProcCommand("SelectAllprogramasasignados");
-
-				return myDatabase.ExecuteDataSet(myCommand);
+                myCommand.Parameters.Add(CreateInParameter("matricula", MySqlDbType.Int32, matricula));
+                return myDatabase.ExecuteDataSet(myCommand);
 			}catch(Exception ex){
 				bool rethrow = ExceptionPolicy.HandleException(ex, "NO");
 				if(rethrow)
@@ -137,7 +137,25 @@ namespace SUSS2016.DA
 			}
 		}
 
-		private static MySqlParameter CreateInParameter(string paramName, MySqlDbType dbType, object value)
+        public static DataSet SelectActivo(int matricula)
+        {
+            try
+            {
+                Database myDatabase = factory.Create("constr");
+                MySqlCommand myCommand = (MySqlCommand)myDatabase.GetStoredProcCommand("selectProgramaActivo");
+                myCommand.Parameters.Add(CreateInParameter("matricula", MySqlDbType.Int32, matricula));
+                return myDatabase.ExecuteDataSet(myCommand);
+            }
+            catch (Exception ex)
+            {
+                bool rethrow = ExceptionPolicy.HandleException(ex, "NO");
+                if (rethrow)
+                    throw;
+                return new DataSet();
+            }
+        }
+
+        private static MySqlParameter CreateInParameter(string paramName, MySqlDbType dbType, object value)
 		{
 			MySqlParameter parameter = new MySqlParameter(paramName, dbType);
 			parameter.Direction = ParameterDirection.Input;
