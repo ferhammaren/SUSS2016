@@ -2,5 +2,13 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <asp:ObjectDataSource ID="ObjectDataSource1" runat="server"></asp:ObjectDataSource>
+    <asp:ObjectDataSource ID="programas" runat="server" SelectMethod="SelectAll" TypeName="DA.PROGRAMASERVICIOSOCIAL"></asp:ObjectDataSource>
+    <asp:GridView ID="GridView1" runat="server" DataSourceID="programas">
+        <Columns>
+            <asp:BoundField DataField="nombrePrograma" HeaderText="Nombre del Programa" />
+            <asp:BoundField DataField="etapa" HeaderText="Etapa" />
+            <asp:ButtonField Text="Solicitar Asignación" />
+        </Columns>
+    </asp:GridView>
+    <br />
 </asp:Content>

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using Clases;
+using SUSS2016.CLASES;
 
 namespace WEBGUI
 {

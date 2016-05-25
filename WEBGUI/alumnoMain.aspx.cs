@@ -1,10 +1,11 @@
-﻿using System;
+﻿using SUSS2016.CLASES;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using ISW.SUSS.Clases;
+
 
 namespace WEBGUI
 {
