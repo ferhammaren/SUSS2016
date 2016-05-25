@@ -9,11 +9,11 @@ namespace Clases.Modelos
 {
     public class Alumno 
     {
-        private string nombre { get; set; }
-        private string ap_paterno { get; set; }
-        private string ap_materno { get; set; }
+        public string nombre { get; set; }
+        public string ap_paterno { get; set; }
+        public string ap_materno { get; set; }
         private int idUsuario { get; set; }
-        private int matricula { get; set; }
+        public int matricula { get; set; }
         private string unidadAcademica { get; set; }
         public string correoAlt { get; set; }
         public int horasPrimEtapa { get; set; }
@@ -43,5 +43,6 @@ namespace Clases.Modelos
         {
             return nombre + " " + ap_paterno + " " + ap_materno + " ";
         }
+
     }
 }

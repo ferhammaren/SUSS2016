@@ -52,6 +52,7 @@
                 <Items>
                     <asp:MenuItem NavigateUrl="~/alumnoMain.aspx" Text="Principal" Value="Principal"></asp:MenuItem>
                     <asp:MenuItem NavigateUrl="~/alumnoCatalogoProgramas.aspx" Text="Catálogo de programas" Value="Catálogo de programas"></asp:MenuItem>
+                    <asp:MenuItem NavigateUrl="~/alumnoReporte.aspx" Text="Reportes" Value="Reportes"></asp:MenuItem>
                     <asp:MenuItem Text="Taller de Servicio Social" Value="Taller de Servicio Social">
                         <asp:MenuItem Text="Información de Servicio Social" Value="Información de Servicio Social"></asp:MenuItem>
                         <asp:MenuItem Text="Presentar Taller en línea" Value="Presentar Taller en línea"></asp:MenuItem>

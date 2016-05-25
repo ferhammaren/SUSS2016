@@ -29,11 +29,26 @@ namespace SUSS2016.CLASES
 
         }
 
+        //public static String getNombre()
+        //{
+        //    String nombre = al.ToString();
+            
+        //    return nombre;
+        //}
+
+        public static Alumno getAlumno()
+        {
+            return al;
+        }
+
         public static String getNombre()
         {
-            String nombre = al.ToString();
-            
-            return nombre;
+            return al.nombre + " " + al.ap_paterno + " " + al.ap_materno + " ";
+
+        }
+        public static String getMatricula()
+        {
+            return al.matricula+"";
         }
     }
 }
