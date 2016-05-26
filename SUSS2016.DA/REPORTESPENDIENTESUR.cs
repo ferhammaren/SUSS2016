@@ -8,64 +8,53 @@ namespace DataAccess
 {
 	/// -----------------------------------------------------------------------------
 	/// Project	 : DataAccess
-	/// Class	 : Programaserviciosocial
+	/// Class	 : Reportespendientesur
 	/// 
 	/// -----------------------------------------------------------------------------
 	/// <summary>
-	/// Data access class for PROGRAMASERVICIOSOCIAL table.
+	/// Data access class for REPORTESPENDIENTESUR table.
 	/// </summary>
 	/// <remarks>
 	/// </remarks>
 	/// <history>
-	/// 	[Edgar]	22/05/2016 21:39:52	Created
+	/// 	[Edgar]	25/05/2016 17:58:43	Created
 	/// </history>
 	/// -----------------------------------------------------------------------------
 	public sealed class REPORTESPENDIENTESUR
 	{
         private static DatabaseProviderFactory factory = new DatabaseProviderFactory();
+
         private REPORTESPENDIENTESUR() {}
 
 		/// -----------------------------------------------------------------------------
 		/// <summary>
-		/// Inserts a record into the PROGRAMASERVICIOSOCIAL table.
+		/// Inserts a record into the REPORTESPENDIENTESUR table.
 		/// <summary>
-		/// <param name="carrera"></param>
-		/// <param name="nombrePrograma"></param>
-		/// <param name="idSupervisor"></param>
-		/// <param name="etapa"></param>
-		/// <param name="horas"></param>
-		/// <param name="cupo"></param>
-		/// <param name="asignados"></param>
-		/// <param name="municipio"></param>
-		/// <param name="unidadReceptora"></param>
-		/// <param name="sector"></param>
-		/// <param name="objetivo"></param>
-		/// <param name="actividades"></param>
+		/// <param name="matricula"></param>
+		/// <param name="programa"></param>
+		/// <param name="reporte"></param>
+		/// <param name="tipoReporte"></param>
+		/// <param name="rutaReporte"></param>
 		/// <returns></returns>
 		/// <remarks>
 		/// </remarks>
 		/// <history>
-		/// 	[Edgar]	22/05/2016 21:39:52	Created
+		/// 	[Edgar]	25/05/2016 17:58:43	Created
 		/// </history>
 		/// -----------------------------------------------------------------------------
-		public static Int32 Insert(int carrera, string nombrePrograma, int idSupervisor, int etapa, int horas, int cupo, int asignados, int municipio, int unidadReceptora, int sector, string objetivo, string actividades)
+		public static Int32 Insert(int matricula, int programa, string reporte, int tipoReporte, string rutaReporte)
 		{
 			try{
+				//Database myDatabase = DatabaseFactory.CreateDatabase();
                 Database myDatabase = factory.Create("constr");
-                MySqlCommand myCommand = (MySqlCommand) myDatabase.GetStoredProcCommand("suss.Insertprogramaserviciosocial");
 
-				myCommand.Parameters.Add(CreateInParameter("P_carrera", MySqlDbType.Int32, carrera));
-				myCommand.Parameters.Add(CreateInParameter("P_nombrePrograma", MySqlDbType.VarChar, nombrePrograma));
-				myCommand.Parameters.Add(CreateInParameter("P_idSupervisor", MySqlDbType.Int32, idSupervisor));
-				myCommand.Parameters.Add(CreateInParameter("P_etapa", MySqlDbType.Int32, etapa));
-				myCommand.Parameters.Add(CreateInParameter("P_horas", MySqlDbType.Int32, horas));
-				myCommand.Parameters.Add(CreateInParameter("P_cupo", MySqlDbType.Int32, cupo));
-				myCommand.Parameters.Add(CreateInParameter("P_asignados", MySqlDbType.Int32, asignados));
-				myCommand.Parameters.Add(CreateInParameter("P_municipio", MySqlDbType.Int32, municipio));
-				myCommand.Parameters.Add(CreateInParameter("P_unidadReceptora", MySqlDbType.Int32, unidadReceptora));
-				myCommand.Parameters.Add(CreateInParameter("P_sector", MySqlDbType.Int32, sector));
-				myCommand.Parameters.Add(CreateInParameter("P_objetivo", MySqlDbType.VarChar, objetivo));
-				myCommand.Parameters.Add(CreateInParameter("P_actividades", MySqlDbType.VarChar, actividades));
+                MySqlCommand myCommand = (MySqlCommand) myDatabase.GetStoredProcCommand("suss.Insertreportespendientesur");
+
+				myCommand.Parameters.Add(CreateInParameter("P_matricula", MySqlDbType.Int32, matricula));
+				myCommand.Parameters.Add(CreateInParameter("P_programa", MySqlDbType.Int32, programa));
+				myCommand.Parameters.Add(CreateInParameter("P_reporte", MySqlDbType.VarChar, reporte));
+				myCommand.Parameters.Add(CreateInParameter("P_tipoReporte", MySqlDbType.Int32, tipoReporte));
+				myCommand.Parameters.Add(CreateInParameter("P_rutaReporte", MySqlDbType.VarChar, rutaReporte));
 
 				myCommand.Parameters.Add(CreateOutParameter("PKEY", MySqlDbType.Int32, null));//AERobles
 				
@@ -73,7 +62,7 @@ namespace DataAccess
 				myDatabase.ExecuteNonQuery(myCommand);
 				return Convert.ToInt32(myCommand.Parameters["PKEY"].Value);
 			}catch(Exception ex){
-				bool rethrow = ExceptionPolicy.HandleException(ex, "kek");
+				bool rethrow = ExceptionPolicy.HandleException(ex, "keklmao");
 				if(rethrow)
 					throw;
 				return 0;
@@ -82,59 +71,53 @@ namespace DataAccess
 
 		/// -----------------------------------------------------------------------------
 		/// <summary>
-		/// Selects a single record from the PROGRAMASERVICIOSOCIAL table.
+		/// Selects all records from the REPORTESPENDIENTESUR table.
 		/// <summary>
 		/// <returns>DataSet</returns>
 		/// <remarks>
 		/// </remarks>
 		/// <history>
-		/// 	[Edgar]	22/05/2016 21:39:52	Created
+		/// 	[Edgar]	25/05/2016 17:58:43	Created
 		/// </history>
 		/// -----------------------------------------------------------------------------
-		public static DataSet  SelectSingle(int idPrograma) 
+		public static DataSet  SelectAll(int ur)
 		{
 			try{
                 Database myDatabase = factory.Create("constr");
-                MySqlCommand myCommand = (MySqlCommand) myDatabase.GetStoredProcCommand("suss.SelectSingleprogramaserviciosocial");
+                MySqlCommand myCommand = (MySqlCommand) myDatabase.GetStoredProcCommand("suss.SelectAllreportespendientesur");
 
-				myCommand.Parameters.Add(CreateInParameter("P_idPrograma", MySqlDbType.Int32, idPrograma));
 
-				return myDatabase.ExecuteDataSet(myCommand);
+                myCommand.Parameters.Add(CreateInParameter("unidad", MySqlDbType.Int32, ur));
+                return myDatabase.ExecuteDataSet(myCommand);
 			}catch(Exception ex){
-				bool rethrow = ExceptionPolicy.HandleException(ex, "kek");
+				bool rethrow = ExceptionPolicy.HandleException(ex, "keklmao");
 				if(rethrow)
 					throw;
 				return new DataSet();
 			}
 		}
 
-		/// -----------------------------------------------------------------------------
-		/// <summary>
-		/// Selects all records from the PROGRAMASERVICIOSOCIAL table.
-		/// <summary>
-		/// <returns>DataSet</returns>
-		/// <remarks>
-		/// </remarks>
-		/// <history>
-		/// 	[Edgar]	22/05/2016 21:39:52	Created
-		/// </history>
-		/// -----------------------------------------------------------------------------
-		public static DataSet  SelectAll()
-		{
-			try{
-                Database myDatabase = factory.Create("constr");
-                MySqlCommand myCommand = (MySqlCommand) myDatabase.GetStoredProcCommand("SelectAllReportesPendientesUR");
+        public static void Delete(int matricula)
+        {
+            Database myDatabase = factory.Create("constr");
+            MySqlCommand myCommand = (MySqlCommand)myDatabase.GetStoredProcCommand("deleteReporteUR");
 
-				return myDatabase.ExecuteDataSet(myCommand);
-			}catch(Exception ex){
-				bool rethrow = ExceptionPolicy.HandleException(ex, "kek");
-				if(rethrow)
-					throw;
-				return new DataSet();
-			}
-		}
+            myCommand.Parameters.Add(CreateInParameter("matricula", MySqlDbType.Int32, matricula));
 
-		private static MySqlParameter CreateInParameter(string paramName, MySqlDbType dbType, object value)
+            myDatabase.ExecuteNonQuery(myCommand);
+        }
+
+        public static DataSet SelectBy(int idSolicitud)
+        {
+            Database myDatabase = factory.Create("constr");
+            MySqlCommand myCommand = (MySqlCommand)myDatabase.GetStoredProcCommand("selectsinglesolicitudur");
+
+            myCommand.Parameters.Add(CreateInParameter("idSol", MySqlDbType.Int32, idSolicitud));
+
+            return myDatabase.ExecuteDataSet(myCommand);
+        }
+
+        private static MySqlParameter CreateInParameter(string paramName, MySqlDbType dbType, object value)
 		{
 			MySqlParameter parameter = new MySqlParameter(paramName, dbType);
 			parameter.Direction = ParameterDirection.Input;

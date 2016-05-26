@@ -90,6 +90,7 @@
     <Content Include="uaReportesPendientes.aspx" />
     <Content Include="uaSolicitudesPendientes.aspx" />
     <Content Include="urMain.aspx" />
+    <Content Include="urReportesPendientes.aspx" />
     <Content Include="urSolicitudesPendientes.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -178,6 +179,13 @@
     </Compile>
     <Compile Include="urMain.aspx.designer.cs">
       <DependentUpon>urMain.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="urReportesPendientes.aspx.cs">
+      <DependentUpon>urReportesPendientes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="urReportesPendientes.aspx.designer.cs">
+      <DependentUpon>urReportesPendientes.aspx</DependentUpon>
     </Compile>
     <Compile Include="urSolicitudesPendientes.aspx.cs">
       <DependentUpon>urSolicitudesPendientes.aspx</DependentUpon>

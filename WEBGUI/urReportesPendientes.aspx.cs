@@ -14,6 +14,10 @@ namespace SUSS2016
 
         }
 
-       // protected void
+       protected void aprobar_Reporte(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }

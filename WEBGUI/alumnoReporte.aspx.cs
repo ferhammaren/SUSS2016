@@ -1,4 +1,5 @@
-﻿using SUSS2016.CLASES;
+﻿using DataAccess;
+using SUSS2016.CLASES;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -47,6 +48,8 @@ namespace WEBGUI
                         if (tipoReporte.SelectedIndex == 0)
                         {
                             elegirReporte.SaveAs(serverPath + etapaRep + "\\Reporte_trimestral\\" + Alumnos.getMatricula() + extensionDoc);
+                            REPORTESPENDIENTESUR.Insert(Alumnos.getMatricula(), Convert.ToInt32(Session["programaSelected"]), etapaReporte.SelectedValue, tipoReporte.SelectedIndex+1, serverPath + etapaRep + "\\Reporte_trimestral\\" + Alumnos.getMatricula() + extensionDoc);
+
                         }
                         else if (tipoReporte.SelectedIndex == 1)
                         {

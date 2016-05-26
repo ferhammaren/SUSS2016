@@ -8,6 +8,15 @@
     <title>Sistema Universitario de Servicio Social :: Unidad Académica</title>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style1 {
+            height: 19px;
+        }
+        .auto-style2 {
+            height: 20px;
+            width: 19px;
+        }
+    </style>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -55,8 +64,21 @@
             <td>&nbsp;</td>
         </tr>
     </table>
+          <br />
+          <asp:Menu ID="menuReceptor" runat="server" Orientation="Horizontal">
+              <Items>
+                  <asp:MenuItem NavigateUrl="~/uaMain.aspx" Text="Principal" Value="Principal"></asp:MenuItem>
+                  <asp:MenuItem Text="Solicitudes" Value="Solicitudes">
+                      <asp:MenuItem NavigateUrl="~/uaSolicitudesPendientes.aspx" Text="Programas de Servicio Social" Value="Programas de Servicio Social"></asp:MenuItem>
+                      <asp:MenuItem NavigateUrl="~/uaReportesPendientes.aspx" Text="Reportes de Servicio Social" Value="Reportes de Servicio Social"></asp:MenuItem>
+                  </asp:MenuItem>
+              </Items>
+          </asp:Menu>
     <div>
         <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+            <p class="auto-style2">
+                &nbsp;</p>
         
         </asp:ContentPlaceHolder>
     </div>

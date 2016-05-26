@@ -60,8 +60,8 @@
             <Items>
                 <asp:MenuItem NavigateUrl="~/urMain.aspx" Text="Principal" Value="Principal"></asp:MenuItem>
                 <asp:MenuItem Text="Solicitudes" Value="Solicitudes">
-                    <asp:MenuItem NavigateUrl="~/urReportesPendientes.aspx" Text="Programas de Servicio Social" Value="Programas de Servicio Social"></asp:MenuItem>
-                    <asp:MenuItem NavigateUrl="~/urSolicitudesPendientes.aspx" Text="Reportes de Servicio Social" Value="Reportes de Servicio Social"></asp:MenuItem>
+                    <asp:MenuItem NavigateUrl="~/urSolicitudesPendientes.aspx" Text="Programas de Servicio Social" Value="Programas de Servicio Social"></asp:MenuItem>
+                    <asp:MenuItem NavigateUrl="~/urReportesPendientes.aspx" Text="Reportes de Servicio Social" Value="Reportes de Servicio Social"></asp:MenuItem>
                 </asp:MenuItem>
             </Items>
         </asp:Menu>

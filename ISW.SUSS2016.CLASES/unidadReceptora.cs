@@ -1,4 +1,5 @@
-﻿using Proyecto_ISW.Clases;
+﻿using DataAccess;
+using Proyecto_ISW.Clases;
 using SUSS2016.DA;
 using System;
 using System.Collections.Generic;
@@ -72,7 +73,7 @@ namespace SUSS2016.CLASES
             //change these parameters
             DataSet db;
             db = REPORTESPENDIENTESUR.SelectBy(reporteId);
-            REPORTESPENDIENTESUA.Insert(Convert.ToInt32(db.Tables[0].Rows[0]["matricula"]), Convert.ToInt32(db.Tables[0].Rows[0]["idPrograma"]), db.Tables[0].Rows[0]["horarioAlumno"].ToString(), db.Tables[0].Rows[0]["horarioPrestacion"].ToString(), Convert.ToDateTime(db.Tables[0].Rows[0]["fechaAsignacion"]), Convert.ToDateTime(db.Tables[0].Rows[0]["fechaConclusion"]));
+    //        REPORTESPENDIENTESUA.Insert(Convert.ToInt32(db.Tables[0].Rows[0]["matricula"]), Convert.ToInt32(db.Tables[0].Rows[0]["idPrograma"]), db.Tables[0].Rows[0]["horarioAlumno"].ToString(), db.Tables[0].Rows[0]["horarioPrestacion"].ToString(), Convert.ToDateTime(db.Tables[0].Rows[0]["fechaAsignacion"]), Convert.ToDateTime(db.Tables[0].Rows[0]["fechaConclusion"]));
             REPORTESPENDIENTESUR.Delete(Convert.ToInt32(db.Tables[0].Rows[0]["matricula"]));
         }
 

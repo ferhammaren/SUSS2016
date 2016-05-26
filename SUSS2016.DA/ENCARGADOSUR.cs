@@ -40,7 +40,7 @@ namespace SUSS2016.DA
             Database myDatabase = factory.Create("constr");
             MySqlCommand myCommand = (MySqlCommand)myDatabase.GetStoredProcCommand("SelectSingleencargadosur");
 
-            myCommand.Parameters.Add(CreateInParameter("userId", MySqlDbType.Int32, numUsuario));
+            myCommand.Parameters.Add(CreateInParameter("idUsuario", MySqlDbType.Int32, numUsuario));
 
             return myDatabase.ExecuteDataSet(myCommand);
         }

@@ -2,17 +2,12 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <asp:GridView ID="reportesView" runat="server" DataSourceID="ObjectDataSource1" AutoGenerateColumns="False">
+    <asp:GridView ID="reportesView" runat="server" DataSourceID="ObjectDataSource1" AutoGenerateColumns="False" OnSelectedIndexChanged="reportesView_SelectedIndexChanged">
         <Columns>
             <asp:BoundField DataField="reporteID" HeaderText="ID del reporte" />
-            <asp:BoundField HeaderText="Nombre del Alumno" />
+            <asp:BoundField HeaderText="Nombre del Alumno" DataField="nombre" />
             <asp:HyperLinkField DataNavigateUrlFields="rutaReporte" HeaderText="Revisar reporte" Text="Revisar" />
-            <asp:TemplateField>
-    <ItemTemplate>
-        <asp:Button ID="btnSolicitar" runat="server" Text="Solicitar" 
-                    OnClick="MyButtonClick" />
-    </ItemTemplate>
-</asp:TemplateField>
+            <asp:ButtonField HeaderText="Solicitudes" Text="Aprobar" />
         </Columns>
     </asp:GridView>
     <br />
