@@ -56,8 +56,10 @@ namespace SUSS2016.CLASES
         public static int getAllPendientes()
         {
             DataSet da;
+            int pendientes = 0;
             da = REPORTESPENDIENTESUR.SelectAll(ur);
-            return da;
+            pendientes = da.Tables[0].Rows.Count;
+            return pendientes;
         }
 
         public static void aceptarSolicitud(int idSol)

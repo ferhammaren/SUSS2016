@@ -110,7 +110,7 @@ namespace DataAccess
         public static DataSet SelectBy(int idSolicitud)
         {
             Database myDatabase = factory.Create("constr");
-            MySqlCommand myCommand = (MySqlCommand)myDatabase.GetStoredProcCommand("selectsinglesolicitudur");
+            MySqlCommand myCommand = (MySqlCommand)myDatabase.GetStoredProcCommand("selectsinglereporteur");
 
             myCommand.Parameters.Add(CreateInParameter("idSol", MySqlDbType.Int32, idSolicitud));
 

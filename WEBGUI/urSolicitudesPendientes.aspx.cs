@@ -24,7 +24,7 @@ namespace SUSS2016
             //Get the row that contains this button
             GridViewRow gvr = (GridViewRow)btn.NamingContainer;
             int id = Convert.ToInt32(gvr.Cells[0].Text);
-            unidadReceptora.aceptarSolicitud(id);
+            unidadReceptora.aceptarReporte(id);
         }
 
     }
