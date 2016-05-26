@@ -43,14 +43,21 @@ namespace SUSS2016.CLASES
             return da;
         }
 
-        //public static int getReportesPendientes()
-        //{
-        //    DataSet da;
-        //    int pendientes = 0;
-        //    da = REPORTESPENDIENTESUR.SelectAll(ur);
-        //    pendientes = da.Tables[0].Rows.Count;
-        //    return pendientes;
-        //}
+        public static int getReportesPendientes()
+        {
+            DataSet da;
+            int pendientes = 0;
+            da = REPORTESPENDIENTESUR.SelectAll(ur);
+            pendientes = da.Tables[0].Rows.Count;
+            return pendientes;
+        }
+
+        public static int getAllPendientes()
+        {
+            DataSet da;
+            da = REPORTESPENDIENTESUR.SelectAll(ur);
+            return da;
+        }
 
         public static void aceptarSolicitud(int idSol)
         {
@@ -59,5 +66,15 @@ namespace SUSS2016.CLASES
             SOLICITUDESPENDIENTESUA.Insert(Convert.ToInt32(db.Tables[0].Rows[0]["matricula"]), Convert.ToInt32(db.Tables[0].Rows[0]["idPrograma"]), db.Tables[0].Rows[0]["horarioAlumno"].ToString(), db.Tables[0].Rows[0]["horarioPrestacion"].ToString(), Convert.ToDateTime(db.Tables[0].Rows[0]["fechaAsignacion"]), Convert.ToDateTime(db.Tables[0].Rows[0]["fechaConclusion"]));
             SOLICITUDESPENDIENTESUR.Delete(Convert.ToInt32(db.Tables[0].Rows[0]["matricula"]));
         }
+
+        public static void aceptarReporte(int reporteId)
+        {
+            //change these parameters
+            DataSet db;
+            db = REPORTESPENDIENTESUR.SelectBy(reporteId);
+            REPORTESPENDIENTESUA.Insert(Convert.ToInt32(db.Tables[0].Rows[0]["matricula"]), Convert.ToInt32(db.Tables[0].Rows[0]["idPrograma"]), db.Tables[0].Rows[0]["horarioAlumno"].ToString(), db.Tables[0].Rows[0]["horarioPrestacion"].ToString(), Convert.ToDateTime(db.Tables[0].Rows[0]["fechaAsignacion"]), Convert.ToDateTime(db.Tables[0].Rows[0]["fechaConclusion"]));
+            REPORTESPENDIENTESUR.Delete(Convert.ToInt32(db.Tables[0].Rows[0]["matricula"]));
+        }
+
     }
 }

@@ -28,7 +28,7 @@
         </tr>
         <tr>
             <td>
-                <asp:Label ID="lbrepPend" runat="server"></asp:Label>
+                <asp:HyperLink ID="HyperLink2" runat="server">0</asp:HyperLink>
             </td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>

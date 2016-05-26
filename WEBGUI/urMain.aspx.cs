@@ -18,6 +18,7 @@ namespace WEBGUI
             {
                 unidadReceptora.getInfoEncargado(Convert.ToInt32(Session["UsuarioId"]));
               HyperLink1.Text = unidadReceptora.getSolicitudesPendientes().ToString();
+                HyperLink2.Text = unidadReceptora.getReportesPendientes().ToString();
             }
             else
             {
