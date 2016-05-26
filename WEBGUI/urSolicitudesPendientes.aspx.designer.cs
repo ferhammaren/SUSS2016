@@ -7,11 +7,9 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SUSS2016
-{
-
-
-    public partial class urSolicitudesPendientes
-    {
+namespace SUSS2016 {
+    
+    
+    public partial class urSolicitudesPendientes {
     }
 }

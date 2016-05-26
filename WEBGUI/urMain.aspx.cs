@@ -17,7 +17,7 @@ namespace WEBGUI
             if (Session["UsuarioId"] != null)
             {
                 unidadReceptora.getInfoEncargado(Convert.ToInt32(Session["UsuarioId"]));
-                lbsolPend.Text = unidadReceptora.getSolicitudesPendientes().ToString();
+              HyperLink1.Text = unidadReceptora.getSolicitudesPendientes().ToString();
             }
             else
             {

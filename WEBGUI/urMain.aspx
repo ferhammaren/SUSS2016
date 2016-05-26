@@ -12,7 +12,7 @@
         </tr>
         <tr>
             <td>
-                <asp:Label ID="lbsolPend" runat="server"></asp:Label>
+                <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/urSolicitudesPendientes.aspx">0</asp:HyperLink>
             </td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>

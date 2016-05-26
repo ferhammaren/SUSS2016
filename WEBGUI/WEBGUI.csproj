@@ -90,63 +90,54 @@
     <Content Include="uaReportesPendientes.aspx" />
     <Content Include="uaSolicitudesPendientes.aspx" />
     <Content Include="urMain.aspx" />
-    <Content Include="urReportesPendientes.aspx" />
     <Content Include="urSolicitudesPendientes.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Alumno.Master.cs">
       <DependentUpon>Alumno.Master</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Alumno.Master.designer.cs">
       <DependentUpon>Alumno.Master</DependentUpon>
     </Compile>
     <Compile Include="alumnoCatalogoProgramas.aspx.cs">
       <DependentUpon>alumnoCatalogoProgramas.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="alumnoCatalogoProgramas.aspx.designer.cs">
       <DependentUpon>alumnoCatalogoProgramas.aspx</DependentUpon>
     </Compile>
     <Compile Include="alumnoMain.aspx.cs">
       <DependentUpon>alumnoMain.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="alumnoMain.aspx.designer.cs">
       <DependentUpon>alumnoMain.aspx</DependentUpon>
     </Compile>
     <Compile Include="alumnoReporte.aspx.cs">
       <DependentUpon>alumnoReporte.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="alumnoReporte.aspx.designer.cs">
       <DependentUpon>alumnoReporte.aspx</DependentUpon>
     </Compile>
     <Compile Include="alumnoSolicitud.aspx.cs">
       <DependentUpon>alumnoSolicitud.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="alumnoSolicitud.aspx.designer.cs">
       <DependentUpon>alumnoSolicitud.aspx</DependentUpon>
     </Compile>
     <Compile Include="alumnoSolicitudAsignacion.aspx.cs">
       <DependentUpon>alumnoSolicitudAsignacion.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="alumnoSolicitudAsignacion.aspx.designer.cs">
       <DependentUpon>alumnoSolicitudAsignacion.aspx</DependentUpon>
     </Compile>
     <Compile Include="Generic.Master.cs">
       <DependentUpon>Generic.Master</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Generic.Master.designer.cs">
       <DependentUpon>Generic.Master</DependentUpon>
     </Compile>
     <Compile Include="index.aspx.cs">
       <DependentUpon>index.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="index.aspx.designer.cs">
       <DependentUpon>index.aspx</DependentUpon>
@@ -154,52 +145,39 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="uaMain.aspx.cs">
       <DependentUpon>uaMain.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="uaMain.aspx.designer.cs">
       <DependentUpon>uaMain.aspx</DependentUpon>
     </Compile>
     <Compile Include="uaReportesPendientes.aspx.cs">
       <DependentUpon>uaReportesPendientes.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="uaReportesPendientes.aspx.designer.cs">
       <DependentUpon>uaReportesPendientes.aspx</DependentUpon>
     </Compile>
     <Compile Include="uaSolicitudesPendientes.aspx.cs">
       <DependentUpon>uaSolicitudesPendientes.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="uaSolicitudesPendientes.aspx.designer.cs">
       <DependentUpon>uaSolicitudesPendientes.aspx</DependentUpon>
     </Compile>
     <Compile Include="UnidadAcademica.Master.cs">
       <DependentUpon>UnidadAcademica.Master</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="UnidadAcademica.Master.designer.cs">
       <DependentUpon>UnidadAcademica.Master</DependentUpon>
     </Compile>
     <Compile Include="UnidadReceptora.Master.cs">
       <DependentUpon>UnidadReceptora.Master</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="UnidadReceptora.Master.designer.cs">
       <DependentUpon>UnidadReceptora.Master</DependentUpon>
     </Compile>
     <Compile Include="urMain.aspx.cs">
       <DependentUpon>urMain.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="urMain.aspx.designer.cs">
       <DependentUpon>urMain.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="urReportesPendientes.aspx.cs">
-      <DependentUpon>urReportesPendientes.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="urReportesPendientes.aspx.designer.cs">
-      <DependentUpon>urReportesPendientes.aspx</DependentUpon>
     </Compile>
     <Compile Include="urSolicitudesPendientes.aspx.cs">
       <DependentUpon>urSolicitudesPendientes.aspx</DependentUpon>
