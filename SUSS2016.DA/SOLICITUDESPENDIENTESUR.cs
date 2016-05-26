@@ -97,7 +97,7 @@ namespace SUSS2016.DA
         }
         public static void Delete(int matricula)
         {
-            Database myDatabase = DatabaseFactory.CreateDatabase();
+            Database myDatabase = factory.Create("constr");
             MySqlCommand myCommand = (MySqlCommand)myDatabase.GetStoredProcCommand("deleteSolicitudUR");
 
             myCommand.Parameters.Add(CreateInParameter("matricula", MySqlDbType.Int32, matricula));

@@ -42,7 +42,7 @@ namespace SUSS2016.DA
 		/// 	[Fer]	5/25/2016 12:23:20 AM	Created
 		/// </history>
 		/// -----------------------------------------------------------------------------
-		public static Int32 Insert(int matricula, int idPrograma, string horarioAlumno, string horarioPrestacion, DateTime fechaAsignacion, DateTime fechaConclusion)
+		public static void Insert(int matricula, int idPrograma, string horarioAlumno, string horarioPrestacion, DateTime fechaAsignacion, DateTime fechaConclusion)
 		{
 			try{
                 Database myDatabase = factory.Create("constr");
@@ -59,12 +59,13 @@ namespace SUSS2016.DA
 				
 				// Execute the query and return the new identity value
 				myDatabase.ExecuteNonQuery(myCommand);
-				return Convert.ToInt32(myCommand.Parameters["PKEY"].Value);
 			}catch(Exception ex){
 				bool rethrow = ExceptionPolicy.HandleException(ex, "NO");
-				if(rethrow)
-					throw;
-				return 0;
+                if (rethrow)
+                {
+
+                }
+				
 			}
 		}
 
